@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Logo Test">
+<parameter name="browserName" value="chrome"/>
+    <!-- Yurstore system has a functionality to create required and optional logos.
+     This test creates two addon logos associating it with one primary logo and sets some location.
+     It edits one of the product location to match the logo location to show optional and required logo.
+     This is the test script to assert required and optional logo are displayed correctly as of its functionality.
+      At last the company created and the product edited are deleted-->
+    <test name="Create Required, Optional and Primary logo.">
+        <classes>
+            <class name="test.Backend.Tests.CreateCompanyAndStoreTest">
+                <methods>
+                    <include name = "createCompanyAndStoreTest"/>
+                </methods>
+            </class>
+            <class name="test.Backend.Tests.AddOnLogoAndPrimaryLogoCreationTest">
+                <methods>
+                    <include name = "addOnLogoAndPrimaryLogoCreationTest"/>
+                </methods>
+            </class>
+            <class name="test.Backend.Tests.ProductEditTest">
+                <methods>
+                    <include name ="productEditTest"/>
+                </methods>
+            </class>
+            <class name="test.Frontend.Tests.OptionalLogoTest">
+                <methods>
+                    <include name ="optionalLogoTest"/>
+                </methods>
+            </class>
+            <class name="test.Backend.Tests.ToggleClickForRequiredLogoTest">
+                <methods>
+                    <include name ="toggleClickOnRequiredAddOnLogoTest"/>
+                </methods>
+            </class>
+            <class name="test.Frontend.Tests.RequiredLogoTest">
+                <methods>
+                    <include name ="requiredLogoTest"/>
+                </methods>
+            </class>
+            <class name="test.Backend.Tests.DeleteCompanyAndCompanyEditTest">
+                <methods>
+                    <include name ="deleteCompanyAndProductEditTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

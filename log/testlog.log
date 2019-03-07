@@ -1,0 +1,60 @@
+2019-01-23 15:49:19,466 - Setup -INFO - Running the baseSetup, laying the ground work properly
+2019-01-23 15:49:19,490 - Setup -INFO - Running tests on Windows 10 system. Now setting the correct Driver.
+2019-01-23 15:49:24,746 - Setup -INFO - All test completed, quitting the myWebDriver ...
+2019-01-24 10:52:16,445 - Setup -INFO - Running the baseSetup, laying the ground work properly
+2019-01-24 10:52:16,500 - Setup -INFO - Running tests on Windows 10 system. Now setting the correct Driver.
+2019-01-24 10:52:16,559 - Setup -INFO - Reading the config file now ...
+2019-01-24 10:52:40,101 - Setup -INFO - Login-page opened successfully
+2019-01-24 10:52:46,185 - Setup -INFO - Email and Password entered
+2019-01-24 12:44:54,293 - Setup -INFO - Running the baseSetup, laying the ground work properly
+2019-01-24 12:44:54,303 - Setup -INFO - Running tests on Windows 10 system. Now setting the correct Driver.
+2019-01-24 12:44:54,381 - Setup -INFO - Reading the config file now ...
+2019-01-24 12:45:53,361 - Setup -INFO - Running the baseSetup, laying the ground work properly
+2019-01-24 12:45:53,377 - Setup -INFO - Running tests on Windows 10 system. Now setting the correct Driver.
+2019-01-24 12:45:53,395 - Setup -INFO - Reading the config file now ...
+2019-01-24 12:45:59,936 - Setup -INFO - Driver Defined
+2019-01-24 12:46:01,401 - Setup -INFO - Window maximized, now getting the URL
+2019-01-24 12:46:07,591 - Setup -INFO - Login-page opened successfully
+2019-01-24 12:46:13,296 - Setup -INFO - Email and Password entered
+2019-01-24 13:01:59,270 - Setup -INFO - Running the baseSetup, laying the ground work properly
+2019-01-24 13:01:59,277 - Setup -INFO - Running tests on Windows 10 system. Now setting the correct Driver.
+2019-01-24 13:01:59,367 - test.Backend.Tests.Setup -INFO - browser to be used: chrome
+2019-01-24 13:02:04,578 - test.Backend.Tests.Setup -INFO - All test completed, quitting the myWebDriver ...
+2019-01-24 13:10:29,934 - Setup -INFO - Running the baseSetup, laying the ground work properly
+2019-01-24 13:10:29,943 - Setup -INFO - Running tests on Windows 10 system. Now setting the correct Driver.
+2019-01-24 13:10:29,983 - test.Backend.Tests.Setup -INFO - browser to be used: chrome
+2019-01-24 13:10:35,104 - test.Backend.Tests.Setup -INFO - All test completed, quitting the myWebDriver ...
+2019-01-24 13:13:35,064 - Setup -INFO - Running the baseSetup, laying the ground work properly
+2019-01-24 13:13:35,070 - Setup -INFO - Running tests on Windows 10 system. Now setting the correct Driver.
+2019-01-24 13:13:35,115 - Setup -INFO - Reading the config file now ...
+2019-01-24 13:13:35,116 - Setup -INFO - Creating instance for the test
+2019-01-24 13:13:41,507 - Setup -INFO - Driver Defined
+2019-01-24 13:13:42,655 - Setup -INFO - Window maximized, now getting the URL
+2019-01-24 13:13:46,018 - Setup -INFO - Login-page opened successfully
+2019-01-24 13:13:51,542 - Setup -INFO - Email and Password entered
+2019-01-24 13:14:46,864 - Setup -INFO - All test completed, quitting the myWebDriver ...
+2019-01-24 13:14:46,937 - Setup -INFO - Reading the config file now ...
+2019-01-24 13:14:46,938 - Setup -INFO - Creating instance for the test
+2019-01-24 13:14:50,416 - Setup -INFO - Driver Defined
+2019-01-24 13:14:51,560 - Setup -INFO - Window maximized, now getting the URL
+2019-01-24 13:14:55,519 - Setup -INFO - Login-page opened successfully
+2019-01-24 13:15:01,000 - Setup -INFO - Email and Password entered
+2019-01-24 13:15:57,255 - Setup -INFO - All test completed, quitting the myWebDriver ...
+2019-01-24 13:15:57,337 - Setup -INFO - Reading the config file now ...
+2019-01-24 13:15:57,338 - Setup -INFO - Creating instance for the test
+2019-01-24 13:16:00,809 - Setup -INFO - Driver Defined
+2019-01-24 13:16:01,952 - Setup -INFO - Window maximized, now getting the URL
+2019-01-24 13:16:05,569 - Setup -INFO - Login-page opened successfully
+2019-01-24 13:16:10,924 - Setup -INFO - Email and Password entered
+2019-01-24 13:17:01,835 - Setup -INFO - All test completed, quitting the myWebDriver ...
+2019-01-24 13:17:01,953 - Setup -INFO - Reading the config file now ...
+2019-01-24 13:17:01,989 - Setup -INFO - Creating instance for the test
+2019-01-24 13:17:05,271 - Setup -INFO - Driver Defined
+2019-01-24 13:17:06,406 - Setup -INFO - Window maximized, now getting the URL
+2019-01-24 13:17:09,697 - Setup -INFO - Login-page opened successfully
+2019-01-24 13:17:15,059 - Setup -INFO - Email and Password entered
+2019-03-05 16:40:19,499 - Setup -INFO - Running the baseSetup, laying the ground work properly
+2019-03-05 16:40:19,596 - Setup -INFO - Running tests on Windows 10 system. Now setting the correct Driver.
+2019-03-05 16:46:30,336 - Setup -INFO - Running the baseSetup, laying the ground work properly
+2019-03-05 16:46:30,343 - Setup -INFO - Running tests on Windows 10 system. Now setting the correct Driver.
+2019-03-05 16:46:35,537 - Setup -INFO - All test completed, quitting the myWebDriver ...
