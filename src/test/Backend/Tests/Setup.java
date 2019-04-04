@@ -3,6 +3,7 @@ package test.Backend.Tests;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -17,9 +18,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class Setup {
-    public String browser;
+    public String browserName;
     public String nodeURL;
     public String hubURL;
     public WebDriver myWebDriver;
@@ -68,8 +70,8 @@ public class Setup {
         MYURL = propertiesObject.getProperty("Main_URL");
         loginEmail = propertiesObject.getProperty("login_email");
         loginPassword = propertiesObject.getProperty("login_password");
-        /*hubURL = propertiesObject.getProperty("hub_URL");
-        nodeURL = propertiesObject.getProperty("node_URL");*/
+        //hubURL = propertiesObject.getProperty("hub_URL");
+       //nodeURL = propertiesObject.getProperty("node_URL");
 
         readMyConfig.close();
 
@@ -79,60 +81,30 @@ public class Setup {
         readDriverSelect.close();
 
     }
+//http://10.10.30.44:4444/wd/hub"
+    @Parameters({"portNO","appURL"})
+    @BeforeMethod()
 
-    @BeforeMethod
-    @Parameters({"browserName"})
-    public void setup(String browserName) throws IOException {
+    public void setUp(String portNO, String appURL) throws Exception {
 
-        RemoteWebDriver remoteWebDriver = null;
+        //hubURL = "http://10.10.30.44:4444/wd/hub";
 
-        if (browserName.equals("chrome")) {
-            DesiredCapabilities capabilities = new DesiredCapabilities().chrome();
-            capabilities.setBrowserName("chrome");
-            capabilities.setPlatform(Platform.WINDOWS);
-            remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
-        } else if (browserName.equals("firefox")) {
-            DesiredCapabilities capabilities = new DesiredCapabilities().firefox();
-            capabilities.setBrowserName("firefox");
-            capabilities.setPlatform(Platform.WINDOWS);
-            remoteWebDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
-        }
-
-
-
-
-
-
-    }
-
-
-
-
-
-
-
-        /*readConstantsValues();
-        myLogger_setup.info("Creating instance for the test");
-        *//*DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        readConstantsValues();
+        hubURL = "http://10.10.30.44:4444/wd/hub";
+        myLogger_setup.info("chrome browser test environment created");
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         capabilities.setBrowserName("chrome");
-        capabilities.setPlatform(Platform.WINDOWS);*//*
-        URL url = new URL("http://localhost:4444/wd/hub");
-        myWebDriver = new RemoteWebDriver(url, capabilities);
-        //System.setProperty("webdriver.chrome.myWebDriver", "./WebDrivers/" + driver_selection);
-        ChromeOptions options = new ChromeOptions();
-        options.merge(capabilities);
-        options.addArguments("disable-infobars");
-        // myWebDriver = new ChromeDriver(options);
-        myLogger_setup.info("Driver Defined");
+        capabilities.setPlatform(Platform.WINDOWS);
+        myWebDriver = new RemoteWebDriver(new URL(hubURL), capabilities);
         myWebDriver.manage().window().maximize();
-        myLogger_setup.info("Window maximized, now getting the URL");
-        myWebDriver.get("http://" + MYURL);
-        myLogger_setup.info("Login-page opened successfully");
-    }*/
+        myWebDriver.navigate().to(appURL);
+        myWebDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 
 
 
+
+        }
 
     @AfterMethod
     public void teardown() {
@@ -144,7 +116,7 @@ public class Setup {
         Thread.sleep(5000);
         loginPageobj.setEmailInput(loginEmail);
         loginPageobj.setPasswrdInput(loginPassword);
-       /* *//**
+        /* *//**
          * PHP DEBUGGER CHECK
          *//*
         Thread.sleep(1000);
@@ -156,6 +128,7 @@ public class Setup {
         myLogger_setup.info("Email and Password entered");
         loginPageobj.clickLoginBtn();
     }
+
     public void waitfor(WebElement elementToWait) {
         WebDriverWait waitforoption = new WebDriverWait(myWebDriver, 10);
         waitforoption.until(ExpectedConditions.visibilityOf(elementToWait));

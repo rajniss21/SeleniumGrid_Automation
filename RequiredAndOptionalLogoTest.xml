@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Logo Test">
-<parameter name="browserName" value="chrome"/>
+<suite name="Logo test" parallel="tests">
+    <parameter name="portNo" value="4444"/>
+    <parameter name="appURL" value="http://admin.qa.yurstore.net/"/>
     <!-- Yurstore system has a functionality to create required and optional logos.
      This test creates two addon logos associating it with one primary logo and sets some location.
      It edits one of the product location to match the logo location to show optional and required logo.
@@ -47,3 +48,4 @@
         </classes>
     </test>
 </suite>
+
